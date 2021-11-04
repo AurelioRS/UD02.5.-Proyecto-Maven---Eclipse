@@ -1,5 +1,6 @@
 package es.iessoterohernandez.daw.endes.HelloWorldPdf;
 
+import java.io.File;
 import java.io.FileOutputStream;
 
 import com.itextpdf.text.Document;
@@ -12,7 +13,8 @@ public class App
     {
        try {
     	   Document d = new Document();
-    	   PdfWriter.getInstance(d,new FileOutputStream("C://Users/RAF/HelloWorld.pdf"));
+    	   //PdfWriter.getInstance(d,new FileOutputStream("C://Users/RAF/HelloWorld.pdf"));
+    	   PdfWriter.getInstance(d,new FileOutputStream(new File("HelloWorld.pdf")));
     	   d.open();
     	   d.add(new Paragraph("Hello World"));
     	   d.close();
